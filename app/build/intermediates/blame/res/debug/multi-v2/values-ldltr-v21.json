@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/username/Documents/android/English-Verb/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/98c0b4d64df904bb28d040a50defed6d/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

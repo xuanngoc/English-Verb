@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.verbs.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_addVerb"
+        android:title="Add a Verb"
+        app:showAsAction="never"
+        android:orderInCategory="99" />
+    <item
+        android:id="@+id/action_about_me"
+        android:title="@string/title_activity_About_me"
+        app:showAsAction="never"
+        android:orderInCategory="101"  />
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"
+        />
+</menu>

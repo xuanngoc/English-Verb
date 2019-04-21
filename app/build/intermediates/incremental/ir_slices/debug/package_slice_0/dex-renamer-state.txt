@@ -1,0 +1,4 @@
+#Sun Apr 21 19:35:42 ICT 2019
+base.0=/home/username/Documents/android/English-Verb/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

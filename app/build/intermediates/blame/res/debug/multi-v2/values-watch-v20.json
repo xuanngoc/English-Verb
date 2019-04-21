@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/username/Documents/android/English-Verb/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/home/username/.gradle/caches/transforms-2/files-2.1/98c0b4d64df904bb28d040a50defed6d/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

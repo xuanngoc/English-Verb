@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sun Apr 21 19:35:39 ICT 2019
+1.base=/home/username/Documents/android/English-Verb/app/build/intermediates/merged_assets/debug/out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=ASSET
+0.path=verbs
+0.set=ASSET
+0.base=/home/username/Documents/android/English-Verb/app/build/intermediates/merged_assets/debug/out
+1.path=verbs.db

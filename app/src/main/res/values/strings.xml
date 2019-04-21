@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Verbs</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Verb</string>
+    <string name="title_activity_detail_verb">Detail Verb</string>
+    <string name="title_activity_About_me">About me</string>
+
+
+</resources>

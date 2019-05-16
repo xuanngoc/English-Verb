@@ -1,14 +1,17 @@
 package com.example.verbs;
 
+/*
+source search voice : https://www.androidhive.info/2014/07/android-speech-to-text-tutorial/
+
+        */
+
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,9 +23,13 @@ import android.widget.Toast;
 import com.example.verbs.database.Verb;
 import com.example.verbs.database.VerbDb;
 
+import java.util.ArrayList;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private VerbDb mDbHelper;
+    private final int REQ_CODE_SPEECH_INPUT = 100;
     private Cursor mCursor;
     private ListView mListView;
     private VerbCursorAdapter mCursorAdapter;
@@ -155,8 +162,48 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, About_me.class);
             startActivity(intent);
             return true;
+        }else if(id == R.id.speech_action){
+            promptSpeechInput();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void promptSpeechInput(){
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                "Say something");
+        try {
+            startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(getApplicationContext(),
+                    "Sorry! Your device doesn\\'t support speech input",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQ_CODE_SPEECH_INPUT: {
+                if (resultCode == RESULT_OK && null != data) {
+
+                    ArrayList<String> result = data
+                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    /*txtSpeechInput.setText(result.get(0));*/
+                    Cursor mQuerySubmitCursor = mDbHelper.getResultSearch(result.get(0));
+                    mCursorAdapter.swapCursor(mQuerySubmitCursor);
+                    currentCursor = mQuerySubmitCursor;
+                }
+                break;
+            }
+
+        }
     }
 }

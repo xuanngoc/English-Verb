@@ -1192,6 +1192,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id speech_action
 id split_action_bar
 id spread
 id spread_inside
@@ -1325,7 +1326,11 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap ic_launcher_verb
+mipmap ic_launcher_verb1
+mipmap ic_launcher_verb1_round
 mipmap ic_launcher_verb_round
+mipmap icon_search_voice
+mipmap icon_search_voice1
 raw android512x512
 string abc_action_bar_home_description
 string abc_action_bar_up_description

@@ -24,4 +24,11 @@
         app:actionViewClass="android.support.v7.widget.SearchView"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/speech_action"
+        android:title="speech"
+
+        android:icon="@mipmap/icon_search_voice1"
+        app:showAsAction="always"
+        />
 </menu>
